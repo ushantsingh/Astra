@@ -1,0 +1,97 @@
+.main{
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+#Astra{
+    height: 55vh;
+    transition: transform 0.1s ease-out, filter 0.1s ease-out;
+}
+.speaking-bounce {
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 25px rgba(0, 210, 255, 0.8)) drop-shadow(0 0 50px rgba(178, 36, 239, 0.5));
+}
+
+span{
+    background: linear-gradient(90deg, #b224ef 0%, #00d2ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+    font-size: 2vmax;
+}
+
+button{
+    width: 180px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: black;
+    background: linear-gradient(270deg, #b224ef, #00d2ff, #b224ef);
+    background-size: 200% 200%;
+    animation: buttonPulse 3s ease infinite;
+    cursor: pointer;
+}
+
+@keyframes buttonPulse {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 6px 20px rgba(0, 210, 255, 0.6), 
+    0 0 30px rgba(178, 36, 239, 0.5);
+}
+
+#speak{
+    width: 100px;
+}
+.markdown-wrapper {
+    font-size: 1.5vmax;
+    color: white;
+    text-align: center;
+    max-width: 80%;
+    margin-bottom: 20px;
+}
+
+.markdown-wrapper p {
+    margin: 5px 0;
+}
+
+.markdown-wrapper ul, .markdown-wrapper ol {
+    text-align: left;
+    display: inline-block;
+    margin: 10px auto;
+}
+
+.markdown-wrapper strong {
+    color: #00d2ff; /* Cyberpunk cyan for bold words! */
+}
+
+.response{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#aivoice{
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 40px;
+}
